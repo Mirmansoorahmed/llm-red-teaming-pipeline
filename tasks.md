@@ -61,9 +61,9 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **6.3** Ensure `oss` CI needs no live ACA; do not edit the ACA repo. _Refs: R8.3._
 
 ## Phase 7 — CI regression gate *(no Azure)*
-- [ ] **7.1** Commit `results/baseline.json` (git SHA + timestamp). _Refs: R9.1._
-- [ ] **7.2** Implement `gate.py` + `make gate`; declared thresholds in config; fail on ASR rise or reopened blocked scenario. _Refs: R9.2, R9.4._
-- [ ] **7.3** Add `fixtures/regression/` model/tool-change fixture that reopens a blocked case. _Refs: R9.3._ _Test: gate passes on baseline, fails (non-zero) on regression fixture._
+- [x] **7.1** Commit `results/baseline.json` (git SHA + timestamp). _Refs: R9.1._ _(committed at `eval/results/baseline.json`)_
+- [x] **7.2** Implement `gate.py` + `make gate`; declared thresholds in config; fail on ASR rise or reopened blocked scenario. _Refs: R9.2, R9.4._
+- [x] **7.3** Add `fixtures/regression/` model/tool-change fixture that reopens a blocked case. _Refs: R9.3._ _Test: gate passes on baseline, fails (non-zero) on regression fixture._
 
 ## Phase 8 — Demo, PDF, README *(no Azure)*
 - [ ] **8.1** Wire `make demo` to the §10 script on `oss` with scripted backend; keep under 15 min; record duration (TO BE MEASURED until run). _Refs: R10.1, C9._

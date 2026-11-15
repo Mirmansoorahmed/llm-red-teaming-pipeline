@@ -5,6 +5,8 @@
 
 PYTHON ?= python3
 PROFILE ?= oss
+# The harness is importable from ./src without installation (stdlib-only core).
+export PYTHONPATH := src
 
 .PHONY: help test lint demo gate report smoke clean
 
@@ -33,7 +35,7 @@ demo:
 	@echo "make demo is implemented in Phase 8 (oss). Not available yet." && exit 1
 
 gate:
-	@echo "make gate is implemented in Phase 7. Not available yet." && exit 1
+	$(PYTHON) -m lrtp.cli gate --baseline eval/results/baseline.json
 
 report:
 	@echo "make report is implemented in Phase 8. Not available yet." && exit 1

@@ -27,3 +27,7 @@ jobs:
           else echo "ruff not installed; skipping (optional)"; fi
       - name: Run tests
         run: python -m pytest
+      - name: Regression gate (defended profile vs committed baseline)
+        run: make gate
+      - name: Adapter smoke (skips cleanly with no extras)
+        run: make smoke
