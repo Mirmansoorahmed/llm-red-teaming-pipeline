@@ -32,10 +32,10 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **2.5** Implement scripted/mock backend (deterministic tool calls, offline, no GPU); optional local gen model skipped cleanly and recorded in provenance. _Refs: R3.5._ _Test: scripted backend runs offline._
 
 ## Phase 3 — Core harness + judges *(no Azure)*
-- [ ] **3.1** Implement `runner.py` (scenario × target × profile × runner); enforce allowlist before any call. _Refs: R2.1, R4._
-- [ ] **3.2** Implement `trace.py` (prompts, tool calls + args hash, data access, approvals, redacted text). _Refs: R2.1._
-- [ ] **3.3** Implement deterministic judges: tool-call, data-access, approval-binding, canary/hidden-context, and secondary text judge. _Refs: R2.2–R2.4._ _Test: each judge + text-vs-tool conflict (tool wins)._
-- [ ] **3.4** Persist findings under results dir with provenance + redaction. _Refs: R6._ _Test: result traceable to git SHA + timestamp._
+- [x] **3.1** Implement `runner.py` (scenario × target × profile × runner); enforce allowlist before any call. _Refs: R2.1, R4._
+- [x] **3.2** Implement `trace.py` (prompts, tool calls + args hash, data access, approvals, redacted text). _Refs: R2.1._
+- [x] **3.3** Implement deterministic judges: tool-call, data-access, approval-binding, canary/hidden-context, and secondary text judge. _Refs: R2.2–R2.4._ _Test: each judge + text-vs-tool conflict (tool wins)._
+- [x] **3.4** Persist findings under results dir with provenance + redaction. _Refs: R6._ _Test: result traceable to git SHA + timestamp._
 
 ## Phase 4 — v1 attack suites *(no Azure)*
 - [ ] **4.1** Direct prompt injection (DE+EN). _Refs: R5.1._
