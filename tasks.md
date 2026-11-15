@@ -56,9 +56,9 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **5.6** Optional smoke target that runs an adapter only if its extra is present. _Refs: R7.4._ _Test: each adapter skips cleanly when absent; default CI green with extras uninstalled._
 
 ## Phase 6 — ACA target adapter *(no Azure)*
-- [ ] **6.1** Implement `aca.py` HTTP mode (`POST /v1/labels`) and recorded fixture mode. _Refs: R8.1._
-- [ ] **6.2** Score routing decision **and** residual tool-call success; `ask`/`four-eyes` not a block unless the tool call did not happen. _Refs: R8.2._ _Test: fixture `ask` + landed tool call = residual success._
-- [ ] **6.3** Ensure `oss` CI needs no live ACA; do not edit the ACA repo. _Refs: R8.3._
+- [x] **6.1** Implement `aca.py` HTTP mode (`POST /v1/labels`) and recorded fixture mode. _Refs: R8.1._
+- [x] **6.2** Score routing decision **and** residual tool-call success; `ask`/`four-eyes` not a block unless the tool call did not happen. _Refs: R8.2._ _Test: fixture `ask` + landed tool call = residual success._
+- [x] **6.3** Ensure `oss` CI needs no live ACA; do not edit the ACA repo. _Refs: R8.3._
 
 ## Phase 7 — CI regression gate *(no Azure)*
 - [ ] **7.1** Commit `results/baseline.json` (git SHA + timestamp). _Refs: R9.1._
