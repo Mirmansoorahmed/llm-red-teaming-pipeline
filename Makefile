@@ -6,7 +6,7 @@
 PYTHON ?= python3
 PROFILE ?= oss
 
-.PHONY: help test lint demo gate report clean
+.PHONY: help test lint demo gate report smoke clean
 
 help:
 	@echo "Targets:"
@@ -22,6 +22,11 @@ test:
 lint:
 	@if command -v ruff >/dev/null 2>&1; then ruff check src tests; \
 	else echo "ruff not installed; skipping lint (optional)"; fi
+
+# Optional adapter smoke check. Skips every adapter whose extra is absent and
+# exits 0, so it is safe to run in the default oss environment.
+smoke:
+	$(PYTHON) -m lrtp.adapters.smoke
 
 # Phases 7/8 are not implemented yet; these fail loudly rather than fake output.
 demo:

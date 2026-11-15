@@ -48,12 +48,12 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **4.8** Benign hard negatives that must succeed on `defended`. _Refs: R5.2._ _Test: ≥1 DE + ≥1 EN per suite; benign passes on defended; no block-everything._
 
 ## Phase 5 — Optional OSS adapters *(no Azure)*
-- [ ] **5.1** Define adapter interface normalising into the finding schema. _Refs: R7.1._
-- [ ] **5.2** garak 0.17.1 adapter (optional extra). _Refs: R7.2._
-- [ ] **5.3** AgentDojo 0.1.35 adapter, isolated/pinned (API may change). _Refs: R7.2._
-- [ ] **5.4** PyRIT 1.2.0 adapter (optional, heavy). _Refs: R7.2._
-- [ ] **5.5** promptfoo 0.125.1 adapter; re-check MIT licence + install path. _Refs: R7.2._
-- [ ] **5.6** Optional smoke target that runs an adapter only if its extra is present. _Refs: R7.4._ _Test: each adapter skips cleanly when absent; default CI green with extras uninstalled._
+- [x] **5.1** Define adapter interface normalising into the finding schema. _Refs: R7.1._
+- [x] **5.2** garak 0.17.1 adapter (optional extra). _Refs: R7.2._
+- [x] **5.3** AgentDojo 0.1.35 adapter, isolated/pinned (API may change). _Refs: R7.2._
+- [x] **5.4** PyRIT 1.2.0 adapter (optional, heavy). _Refs: R7.2._
+- [x] **5.5** promptfoo 0.125.1 adapter; re-check MIT licence + install path. _Refs: R7.2._
+- [x] **5.6** Optional smoke target that runs an adapter only if its extra is present. _Refs: R7.4._ _Test: each adapter skips cleanly when absent; default CI green with extras uninstalled._
 
 ## Phase 6 — ACA target adapter *(no Azure)*
 - [ ] **6.1** Implement `aca.py` HTTP mode (`POST /v1/labels`) and recorded fixture mode. _Refs: R8.1._
