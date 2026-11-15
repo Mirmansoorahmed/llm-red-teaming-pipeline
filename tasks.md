@@ -25,11 +25,11 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **1.5** Define DE+EN fixture layout under `scenarios/` and `fixtures/`. _Refs: R5._
 
 ## Phase 2 — Demo sales agent *(no Azure)*
-- [ ] **2.1** Implement synthetic CRM / mailboxes / documents and the §6 tools. _Refs: R3.1._
-- [ ] **2.2** Add fixture users (junior rep, head of sales); restrict forecast to head of sales. _Refs: R3.2._ _Test: junior denied forecast on defended._
-- [ ] **2.3** Implement `vulnerable` profile (shared high-privilege tools, docs-as-instructions, no binding, retrievable system prompt). _Refs: R3.3._
-- [ ] **2.4** Implement `defended` profile test double (per-user allowlist, narrow wrappers, risk-tiered approval, approval token = hash(tool+args), canaries, retrieved-as-data). Label as test double. _Refs: R3.4._
-- [ ] **2.5** Implement scripted/mock backend (deterministic tool calls, offline, no GPU); optional local gen model skipped cleanly and recorded in provenance. _Refs: R3.5._ _Test: scripted backend runs offline._
+- [x] **2.1** Implement synthetic CRM / mailboxes / documents and the §6 tools. _Refs: R3.1._
+- [x] **2.2** Add fixture users (junior rep, head of sales); restrict forecast to head of sales. _Refs: R3.2._ _Test: junior denied forecast on defended._
+- [x] **2.3** Implement `vulnerable` profile (shared high-privilege tools, docs-as-instructions, no binding, retrievable system prompt). _Refs: R3.3._
+- [x] **2.4** Implement `defended` profile test double (per-user allowlist, narrow wrappers, risk-tiered approval, approval token = hash(tool+args), canaries, retrieved-as-data). Label as test double. _Refs: R3.4._
+- [x] **2.5** Implement scripted/mock backend (deterministic tool calls, offline, no GPU); optional local gen model skipped cleanly and recorded in provenance. _Refs: R3.5._ _Test: scripted backend runs offline._
 
 ## Phase 3 — Core harness + judges *(no Azure)*
 - [ ] **3.1** Implement `runner.py` (scenario × target × profile × runner); enforce allowlist before any call. _Refs: R2.1, R4._
