@@ -14,9 +14,10 @@ help:
 	@echo "Targets:"
 	@echo "  make test     - run the test suite (pytest), stdlib-only harness"
 	@echo "  make lint     - run ruff if present (optional; no-op otherwise)"
-	@echo "  make demo     - run the oss demo script (Phase 8; placeholder until then)"
-	@echo "  make gate     - run the regression gate vs committed baseline (Phase 7)"
-	@echo "  make report   - build findings report + risk-memo PDF (Phase 8)"
+	@echo "  make demo     - run the full suite vs vulnerable AND defended; write a run file"
+	@echo "  make gate     - run the regression gate vs committed baseline"
+	@echo "  make report   - regenerate docs/REPORT-DATA.md from the latest committed run (no PDF)"
+	@echo "  make smoke    - optional-adapter smoke check (skips cleanly with no extras)"
 
 test:
 	$(PYTHON) -m pytest
@@ -30,15 +31,17 @@ lint:
 smoke:
 	$(PYTHON) -m lrtp.adapters.smoke
 
-# Phases 7/8 are not implemented yet; these fail loudly rather than fake output.
+# Run the full suite against vulnerable AND defended on the oss scripted backend
+# and write a timestamped JSON run file to eval/results/.
 demo:
-	@echo "make demo is implemented in Phase 8 (oss). Not available yet." && exit 1
+	$(PYTHON) -m lrtp.demo
 
 gate:
 	$(PYTHON) -m lrtp.cli gate --baseline eval/results/baseline.json
 
+# Regenerate docs/REPORT-DATA.md from the latest committed run file (no PDF).
 report:
-	@echo "make report is implemented in Phase 8. Not available yet." && exit 1
+	$(PYTHON) -m lrtp.report_cli --results eval/results --out docs/REPORT-DATA.md
 
 clean:
 	find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true

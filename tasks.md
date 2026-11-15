@@ -65,12 +65,12 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **7.2** Implement `gate.py` + `make gate`; declared thresholds in config; fail on ASR rise or reopened blocked scenario. _Refs: R9.2, R9.4._
 - [x] **7.3** Add `fixtures/regression/` model/tool-change fixture that reopens a blocked case. _Refs: R9.3._ _Test: gate passes on baseline, fails (non-zero) on regression fixture._
 
-## Phase 8 — Demo, PDF, README *(no Azure)*
-- [ ] **8.1** Wire `make demo` to the §10 script on `oss` with scripted backend; keep under 15 min; record duration (TO BE MEASURED until run). _Refs: R10.1, C9._
-- [ ] **8.2** Implement `report.py` + `make report` (brief, diagnosis, options, solution, results, mappings, roadmap); fail closed on missing field / uncommitted number. _Refs: R10.2._ _Test: fail-closed cases._
-- [ ] **8.3** Write 3-minute README (problem → figure → run → results-when-measured → limits). _Refs: R10.3._
-- [ ] **8.4** Reference icon-based `docs/diagrams/architecture.png` when placed; keep Mermaid review diagram until then; no box-only Mermaid as final. _Refs: R10.4._
-- [ ] **8.5** Commit first measured results file; update README/PDF numbers only from it. _Refs: C2._
+## Phase 8 — Demo, run file, README *(no Azure; PDF dropped per Mir — report authored separately)*
+- [x] **8.1** Wire `make demo` to run the full suite vs vulnerable AND defended on `oss` (scripted backend); write a timestamped JSON run file to `eval/results/`. _Refs: R10.1, C9._
+- [x] **8.2** Implement `report.py` + `make report` writing `docs/REPORT-DATA.md` from a committed run file (per-suite ASR, benign false-block, judge breakdown, DE/EN counts, run file name); fail closed when no committed run exists. No PDF built or committed. _Refs: R10.2._ _Test: fail-closed cases._
+- [x] **8.3** Write 3-minute README (problem → figure → run → results from committed run → limits); numbers copied from the committed run file. _Refs: R10.3._
+- [x] **8.4** Reference icon-based `docs/diagrams/architecture.png` when placed; keep Mermaid review diagram until then; no box-only Mermaid as final. _Refs: R10.4._
+- [x] **8.5** Commit the first measured run file (`eval/results/run-*.json`); README / REPORT-DATA numbers come only from it. _Refs: C2._
 
 ## Phase 9 — Hybrid adapters + runbook *(Azure — only after oss demo + PDF exist and Mir says go)*
 - [ ] **9.1** Env-only `LRTP_*` config loader; mocked in tests; clean degrade when credentials missing. _Refs: R11.1–R11.2._ _Test: credentials-absent degrade; oss still runs._
