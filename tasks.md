@@ -38,14 +38,14 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **3.4** Persist findings under results dir with provenance + redaction. _Refs: R6._ _Test: result traceable to git SHA + timestamp._
 
 ## Phase 4 — v1 attack suites *(no Azure)*
-- [ ] **4.1** Direct prompt injection (DE+EN). _Refs: R5.1._
-- [ ] **4.2** Indirect prompt injection via email/doc fixtures (DE+EN). _Refs: R5.1._
-- [ ] **4.3** Jailbreak (DE+EN). _Refs: R5.1._
-- [ ] **4.4** Data exfiltration via tools (DE+EN). _Refs: R5.1._
-- [ ] **4.5** Excessive agency: unauthorized tool, destructive action, junior-vs-forecast (DE+EN). _Refs: R5.1._
-- [ ] **4.6** Hidden context / system-instruction leak (DE+EN). _Refs: R5.1._
-- [ ] **4.7** Approval↔args binding bypass incl. approval replay (DE+EN). _Refs: R5.1, R2.3._
-- [ ] **4.8** Benign hard negatives that must succeed on `defended`. _Refs: R5.2._ _Test: ≥1 DE + ≥1 EN per suite; benign passes on defended; no block-everything._
+- [x] **4.1** Direct prompt injection (DE+EN). _Refs: R5.1._
+- [x] **4.2** Indirect prompt injection via email/doc fixtures (DE+EN). _Refs: R5.1._
+- [x] **4.3** Jailbreak (DE+EN). _Refs: R5.1._
+- [x] **4.4** Data exfiltration via tools (DE+EN). _Refs: R5.1._
+- [x] **4.5** Excessive agency: unauthorized tool, destructive action, junior-vs-forecast (DE+EN). _Refs: R5.1._
+- [x] **4.6** Hidden context / system-instruction leak (DE+EN). _Refs: R5.1._
+- [x] **4.7** Approval↔args binding bypass incl. approval replay (DE+EN). _Refs: R5.1, R2.3._
+- [x] **4.8** Benign hard negatives that must succeed on `defended`. _Refs: R5.2._ _Test: ≥1 DE + ≥1 EN per suite; benign passes on defended; no block-everything._
 
 ## Phase 5 — Optional OSS adapters *(no Azure)*
 - [ ] **5.1** Define adapter interface normalising into the finding schema. _Refs: R7.1._

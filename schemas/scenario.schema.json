@@ -84,6 +84,19 @@
         "owasp_agentic_2026": { "type": "array", "items": { "type": "string" } },
         "atlas_v2026_10": { "type": "array", "items": { "type": "string" } }
       }
+    },
+    "x_steps": {
+      "description": "Implementation hook: deterministic step script(s) for the scripted/mock backend. Either a single list of steps or a per-profile map of step lists. Not part of the conceptual DSL; ignored by conceptual consumers.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "object" } },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "patternProperties": {
+            "^(vulnerable|defended)$": { "type": "array", "items": { "type": "object" } }
+          }
+        }
+      ]
     }
   }
 }
