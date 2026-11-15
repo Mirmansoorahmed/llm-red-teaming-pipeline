@@ -3,7 +3,7 @@
 **Design note (v0.1)** · Portfolio project by Mir Mansoor Ahmed
 **Status:** design · no implementation, no measured results
 **Fictional consultancy in examples:** *Northwind Advisory*
-**Fictional client:** *Ortenwald Handel GmbH* — a mid-size German B2B wholesaler (technical and industrial products), about 1,200 employees, headquarters in Germany, several regional sales offices. Not a real firm. Not Tarsfeld, NordPay, Northwind, Rheinwerk, Vaillant, or any other real employer.
+**Fictional client:** *Ortenwald Handel GmbH* — a mid-size German B2B wholesaler (technical and industrial products), about 1,200 employees, headquarters in Germany, several regional sales offices. Fictional client, not a real firm.
 **Umbrella:** AI Governance Platform · third sibling, after AI Compliance Automation (ACA) and beside the planned Agent Hardening Sandbox
 **Proposed repo (not created):** `llm-red-teaming-pipeline`
 **Date:** 15 November 2026 (Europe/Berlin)
@@ -266,7 +266,7 @@ Limits to say out loud: lab and synthetic data; only our targets; optional runne
 
 ## 15. Azure student account and hybrid adapters
 
-Facts for the lab subscription (do **not** copy the subscription id, university / IU tenant name, or credit amount into the public README, case-study PDF, or commit messages). Detail lives in the internal `PLAN.md`.
+Facts for the lab subscription (do **not** copy the subscription id, student lab tenant name, or credit amount into the public README, case-study PDF, or commit messages). Detail lives in the internal `PLAN.md`.
 
 **Verified**
 

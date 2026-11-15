@@ -14,9 +14,9 @@ Technical design: Technical design: [`DESIGN.md`](DESIGN.md).
 
 - Never invent metrics, headcount of a real employer, repo stars, or outcomes. If it was not measured, write **TO BE MEASURED** and leave the cell empty of numbers.
 - Never copy text from ISO, the EU AI Act, OWASP, or MITRE ATLAS. Use official ids plus a short title in our own words. Mappings are illustrative, not a certification claim.
-- Synthetic data and fictional names only. No real client data. No real company as the client. No employer branding (no Telekom, Magenta, PwC, or other real employer names).
+- Synthetic data and fictional names only. No real client data. No real company as the client. No employer branding and no real employer names anywhere.
 - **No real attacks on third-party systems.** Only the in-repo demo agent and our own ACA lab target.
-- Cloud and vendor choices must be honest: adapters and feature flags, a path that runs without paid APIs, unverified Azure OpenAI access listed as a TODO. Do not publish the lab subscription id, university tenant, or credit amount in this PDF.
+- Cloud and vendor choices must be honest: adapters and feature flags, a path that runs without paid APIs, unverified Azure OpenAI access listed as a TODO. Do not publish the lab subscription id, student lab tenant name, or credit amount in this PDF.
 - Commits in the real repo: no `Co-authored-by`, no AI attribution.
 
 ---

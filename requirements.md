@@ -32,7 +32,7 @@ An automated red-team harness that runs versioned DE+EN attack suites against (a
 - **C5 Only our targets.** Harness refuses any target that is not the in-repo demo agent or the configured ACA lab endpoint / fixture.
 - **C6 Portable by default.** CI and `make demo` pass on profile `oss` with no cloud account and with all optional runner extras uninstalled.
 - **C7 Commit hygiene.** Small, labelled commits (e.g. `phase-4: add DE indirect-injection suite`). No `Co-authored-by`, no AI attribution.
-- **C8 Secret hygiene.** Redact secrets and raw personal fields from committed results and the PDF. Never publish the lab subscription id, university/IU tenant, or credit amount.
+- **C8 Secret hygiene.** Redact secrets and raw personal fields from committed results and the PDF. Never publish the lab subscription id, student lab tenant name, or credit amount.
 - **C9 15-minute demo.** Full `make demo` (oss, scripted/mock backend) completes in under 15 minutes after dependencies are installed.
 
 ---

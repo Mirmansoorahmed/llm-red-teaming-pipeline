@@ -198,7 +198,7 @@ Utility check: benign hard negatives must still succeed on `defended`; a block-e
 - **Prompt Shields:** scored as one defended-config signal, recorded separately, never a verdict (R11.3).
 - **Azure OpenAI:** optional target backend and/or pinned judge; judge off by default; deterministic judges stay primary.
 - **Degrade:** missing credentials → clean skip; `oss` path still runs (R11.2).
-- Resource creation portal-only, Germany West Central only, smallest/free tiers, create-test-delete same session (R11.4). Azure OpenAI availability on the student tenant is a TODO — not assumed to work.
+- Resource creation portal-only, Germany West Central only, smallest/free tiers, create-test-delete same session (R11.4). Azure OpenAI availability on the student lab tenant is a TODO — not assumed to work.
 
 ---
 
@@ -237,7 +237,7 @@ Utility check: benign hard negatives must still succeed on `defended`; a block-e
 - No real attacks on third-party systems; only the demo agent and configured ACA lab target/fixture (C5).
 - No invented metrics anywhere; `TO BE MEASURED` / `TARGET` until a committed run exists (C2).
 - Do not silently close ACA's Layer-1/3 implementation gaps and attribute them here; those remain Hardening Sandbox work (`docs/DESIGN.md` §9).
-- Restricted identifiers (lab subscription id, university/IU tenant, credit amount) never appear in README, PDF, or commit messages (C8).
+- Restricted identifiers (lab subscription id, student lab tenant name, credit amount) never appear in README, PDF, or commit messages (C8).
 
 ---
 
