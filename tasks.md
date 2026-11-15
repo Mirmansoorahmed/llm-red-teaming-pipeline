@@ -18,11 +18,11 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 - [x] **0.5** Confirm `docs/DESIGN.md` and `docs/CASE-STUDY.md` are placed; record commit-hygiene rules in `CONTRIBUTING`/README stub. _Refs: C7._
 
 ## Phase 1 — Scenario DSL + finding schema *(no Azure)*
-- [ ] **1.1** Finalise `schemas/scenario.schema.json` with all §5 fields and enums (8 suites, `de`/`en`). _Refs: R1.1–R1.2._
-- [ ] **1.2** Build `mappings/frameworks.yaml` from §7 (OWASP LLM 2026 + 2025 crosswalk, Agentic 2026, ATLAS v2026.10); use `AML.T0085.003`; no padding. _Refs: R1.3–R1.4, C3._
-- [ ] **1.3** Implement `loader.py` with fail-closed validation and mapping-id allowlist. _Refs: R1.5._ _Test: valid + each missing field + bad enum + out-of-set mapping id._
-- [ ] **1.4** Finalise `finding.schema.json` + `findings.py` record model with provenance and redaction hooks. _Refs: R2.5, R6._ _Test: record carries git SHA + timestamp; redaction removes seeded markers._
-- [ ] **1.5** Define DE+EN fixture layout under `scenarios/` and `fixtures/`. _Refs: R5._
+- [x] **1.1** Finalise `schemas/scenario.schema.json` with all §5 fields and enums (8 suites, `de`/`en`). _Refs: R1.1–R1.2._
+- [x] **1.2** Build `mappings/frameworks.yaml` from §7 (OWASP LLM 2026 + 2025 crosswalk, Agentic 2026, ATLAS v2026.10); use `AML.T0085.003`; no padding. _Refs: R1.3–R1.4, C3._
+- [x] **1.3** Implement `loader.py` with fail-closed validation and mapping-id allowlist. _Refs: R1.5._ _Test: valid + each missing field + bad enum + out-of-set mapping id._
+- [x] **1.4** Finalise `finding.schema.json` + `findings.py` record model with provenance and redaction hooks. _Refs: R2.5, R6._ _Test: record carries git SHA + timestamp; redaction removes seeded markers._
+- [x] **1.5** Define DE+EN fixture layout under `scenarios/` and `fixtures/`. _Refs: R5._
 
 ## Phase 2 — Demo sales agent *(no Azure)*
 - [ ] **2.1** Implement synthetic CRM / mailboxes / documents and the §6 tools. _Refs: R3.1._
