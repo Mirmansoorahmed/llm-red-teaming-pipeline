@@ -11,11 +11,11 @@ Each task lists requirement refs and test hooks. Checkboxes are unchecked (not s
 ---
 
 ## Phase 0 — Repo foundation *(no Azure)*
-- [ ] **0.1** Add `Makefile` targets (`test`, `lint`, `demo`, `gate`, `report`) and `pyproject.toml` with core deps and pinned optional extras groups (`[adapters]`, `[hybrid]`). _Refs: C6, C9._
-- [ ] **0.2** Add JSON Schemas `schemas/scenario.schema.json` and `schemas/finding.schema.json` (skeleton). _Refs: R1, R6._
-- [ ] **0.3** Add CI workflow that runs lint + tests on an empty/placeholder fixture set with all optional extras uninstalled. _Refs: C6._ _Test: CI green with no extras._
-- [ ] **0.4** Add `allowlist.py` stub that fails closed on unknown targets (refusal + non-zero exit, no network call). _Refs: R4._ _Test: refuse arbitrary URL / unlisted name._
-- [ ] **0.5** Confirm `docs/DESIGN.md` and `docs/CASE-STUDY.md` are placed; record commit-hygiene rules in `CONTRIBUTING`/README stub. _Refs: C7._
+- [x] **0.1** Add `Makefile` targets (`test`, `lint`, `demo`, `gate`, `report`) and `pyproject.toml` with core deps and pinned optional extras groups (`[adapters]`, `[hybrid]`). _Refs: C6, C9._
+- [x] **0.2** Add JSON Schemas `schemas/scenario.schema.json` and `schemas/finding.schema.json` (skeleton). _Refs: R1, R6._
+- [x] **0.3** Add CI workflow that runs lint + tests on an empty/placeholder fixture set with all optional extras uninstalled. _Refs: C6._ _Test: CI green with no extras._
+- [x] **0.4** Add `allowlist.py` stub that fails closed on unknown targets (refusal + non-zero exit, no network call). _Refs: R4._ _Test: refuse arbitrary URL / unlisted name._
+- [x] **0.5** Confirm `docs/DESIGN.md` and `docs/CASE-STUDY.md` are placed; record commit-hygiene rules in `CONTRIBUTING`/README stub. _Refs: C7._
 
 ## Phase 1 — Scenario DSL + finding schema *(no Azure)*
 - [ ] **1.1** Finalise `schemas/scenario.schema.json` with all §5 fields and enums (8 suites, `de`/`en`). _Refs: R1.1–R1.2._
