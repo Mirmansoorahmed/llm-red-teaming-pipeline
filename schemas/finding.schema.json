@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Mirmansoorahmed/llm-red-teaming-pipeline/schemas/finding.schema.json",
+  "title": "LRTP finding record",
+  "description": "One finding per scenario x target x profile x runner (docs/DESIGN.md section 5).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "suite",
+    "language",
+    "target",
+    "profile",
+    "runner",
+    "verdict",
+    "tool_calls",
+    "data_access",
+    "judges",
+    "mappings",
+    "provenance"
+  ],
+  "properties": {
+    "scenario_id": { "type": "string", "minLength": 1 },
+    "suite": { "type": "string", "minLength": 1 },
+    "language": { "type": "string", "enum": ["de", "en"] },
+    "target": { "type": "string", "enum": ["demo", "aca"] },
+    "profile": { "type": "string", "enum": ["vulnerable", "defended"] },
+    "runner": { "type": "string", "minLength": 1 },
+    "verdict": {
+      "type": "string",
+      "enum": ["success", "blocked", "routed_to_review", "error", "skipped"]
+    },
+    "tool_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "args_hash", "authorised", "approved", "binding_ok"],
+        "properties": {
+          "name": { "type": "string" },
+          "args_hash": { "type": "string" },
+          "authorised": { "type": "boolean" },
+          "approved": { "type": "boolean" },
+          "binding_ok": { "type": "boolean" }
+        }
+      }
+    },
+    "data_access": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["resource", "authorised"],
+        "properties": {
+          "resource": { "type": "string" },
+          "authorised": { "type": "boolean" }
+        }
+      }
+    },
+    "text_excerpt": { "type": "string" },
+    "judges": { "type": "object" },
+    "mappings": { "type": "object" },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["git_sha", "timestamp", "runner_versions", "model_backend"],
+      "properties": {
+        "git_sha": { "type": "string", "minLength": 1 },
+        "timestamp": { "type": "string", "minLength": 1 },
+        "runner_versions": { "type": "object" },
+        "model_backend": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

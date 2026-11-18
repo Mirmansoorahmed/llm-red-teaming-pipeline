@@ -1,0 +1,96 @@
+# Framework mapping tables — illustrative, not a certification or conformity claim.
+# Ids are official; short titles are our own words (no copied framework text).
+# Source: docs/DESIGN.md section 7, verified 15 November 2026 (Europe/Berlin).
+#
+# Primary mapping is OWASP Top 10 for LLM Applications 2026, with a 2025 crosswalk.
+# Also OWASP Top 10 for Agentic Applications 2026 and MITRE ATLAS v2026.10.
+# System-instruction collection uses AML.T0085.003 (the old "Extract LLM System
+# Prompt" name was retired in ATLAS v2026.10). v1 coverage is the set below — do
+# not pad.
+
+owasp_llm_2026:
+  LLM01: Prompt Injection
+  LLM02: Sensitive Information Disclosure
+  LLM03: Excessive Agency
+  LLM04: Supply Chain
+  LLM05: Data and Model Poisoning
+  LLM06: Unbounded Consumption
+  LLM07: Misinformation
+  LLM08: Hidden Context Exposure
+  LLM09: Vector and Embedding Weaknesses
+  LLM10: Improper Output Handling
+
+owasp_llm_2025_crosswalk:
+  LLM01: Prompt Injection (2025 LLM01, same)
+  LLM02: Sensitive Information Disclosure (2025 LLM02, same)
+  LLM03: Excessive Agency (was 2025 LLM06)
+  LLM04: Supply Chain (was 2025 LLM03)
+  LLM05: Data and Model Poisoning (was 2025 LLM04)
+  LLM06: Unbounded Consumption (was 2025 LLM10)
+  LLM07: Misinformation (was 2025 LLM09)
+  LLM08: Hidden Context Exposure (renamed, broader form of 2025 LLM07 System Prompt Leakage)
+  LLM09: Vector and Embedding Weaknesses (was 2025 LLM08)
+  LLM10: Improper Output Handling (was 2025 LLM05)
+
+owasp_agentic_2026:
+  ASI01: Agent Goal Hijack
+  ASI02: Tool Misuse and Exploitation
+  ASI03: Identity and Privilege Abuse
+  ASI04: Agentic Supply Chain Vulnerabilities
+  ASI05: Unexpected Code Execution (RCE)
+  ASI06: Memory and Context Poisoning
+  ASI07: Insecure Inter-Agent Communication
+  ASI08: Cascading Failures
+  ASI09: Human-Agent Trust Exploitation
+  ASI10: Rogue Agents
+
+# ATLAS v2026.10 technique ids we reference (short titles our own words).
+atlas_v2026_10:
+  AML.T0051: LLM Prompt Injection
+  AML.T0051.000: Direct prompt injection
+  AML.T0051.001: Indirect prompt injection
+  AML.T0051.002: Indirect injection triggered by a user event
+  AML.T0053: LLM plugin/tool invocation
+  AML.T0054: LLM jailbreak
+  AML.T0068: Payload obfuscation
+  AML.T0085.001: Data from AI services (training/other data)
+  AML.T0085.003: Data from AI services — system instructions
+  AML.T0086: Data exfiltration via an AI service
+  AML.T0101: Destruction of an AI-reachable resource
+  AML.T0024: Exfiltration via an inference API
+  AML.T0136: Exfiltration in a model/response channel
+
+# Per-suite coverage (v1). Keys match the scenario `suite` enum.
+suites:
+  prompt_injection_direct:
+    owasp_llm_2026: [LLM01]
+    owasp_agentic_2026: [ASI01]
+    atlas_v2026_10: [AML.T0051, AML.T0051.000]
+  prompt_injection_indirect:
+    owasp_llm_2026: [LLM01]
+    owasp_agentic_2026: [ASI01]
+    atlas_v2026_10: [AML.T0051.001, AML.T0051.002]
+  jailbreak:
+    owasp_llm_2026: [LLM01, LLM08]
+    owasp_agentic_2026: [ASI01]
+    atlas_v2026_10: [AML.T0054, AML.T0068]
+  exfil_via_tools:
+    owasp_llm_2026: [LLM02]
+    owasp_agentic_2026: [ASI02]
+    atlas_v2026_10: [AML.T0053, AML.T0086, AML.T0085.001, AML.T0136, AML.T0024]
+  excessive_agency:
+    owasp_llm_2026: [LLM03]
+    owasp_agentic_2026: [ASI02, ASI03]
+    atlas_v2026_10: [AML.T0053, AML.T0101]
+  hidden_context_leak:
+    owasp_llm_2026: [LLM08]
+    owasp_agentic_2026: []
+    atlas_v2026_10: [AML.T0085.003]
+  approval_binding:
+    owasp_llm_2026: [LLM03]
+    owasp_agentic_2026: [ASI09]
+    atlas_v2026_10: [AML.T0053]
+  benign:
+    owasp_llm_2026: []
+    owasp_agentic_2026: []
+    atlas_v2026_10: []

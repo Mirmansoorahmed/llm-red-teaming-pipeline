@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lrtp"
+version = "0.1.0"
+description = "LLM Red-Teaming Pipeline — tool-call-level red-team harness (oss profile)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+# Core harness is standard-library only by design: the default `oss` profile and
+# CI must run with no third-party packages and no network (see docs/DESIGN.md §4,
+# requirements.md C6). Scenario YAML and JSON Schema are parsed/validated by small
+# vendored stdlib-only helpers in src/lrtp/.
+dependencies = []
+
+[project.optional-dependencies]
+# Dev tooling is available in the image; it is not required to run the harness.
+dev = ["pytest"]
+# Optional OSS runner adapters (Phase 5). Pinned, isolated, NOT installed for
+# default CI or `make demo`. Each adapter skips cleanly when its extra is absent.
+adapters = [
+  "garak==0.17.1",
+  "agentdojo==0.1.35",
+  "pyrit==1.2.0",
+  # promptfoo is a Node package (install separately); listed here for docs only.
+]
+# Optional Azure hybrid adapters (Phase 9). Env-only, mocked in tests.
+hybrid = [
+  "azure-ai-contentsafety",
+  "openai",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
